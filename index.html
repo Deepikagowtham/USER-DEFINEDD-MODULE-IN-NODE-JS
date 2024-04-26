@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background-image: url('background.jpg'); /* Replace 'background.jpg' with your image path */
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #calculatorContainer {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            width: 40%;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+
+        img {
+  width: 500px;
+  height: 500px;
+  object-fit: cover;
+  object-position: 70% 100%;
+} 
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="number"],
+        select {
+            width: 60%;
+            padding: 8px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-sizing: border-box;
+            transition: border-color 0.3s;
+        }
+
+        input[type="number"]:focus,
+        select:focus {
+            width: 100%;
+            border-radius: 50px;
+            border: 3px solid #ccc;
+            border-color: #2c80e0;
+            outline: none;
+        }
+
+        div.polaroid {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  
+}
+
+        button[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            background-color: #2c80e0;
+            color: white;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #0c2aec;
+        }
+    </style>
+</head>
+<body>
+    <img src="https://i.pinimg.com/564x/7f/fc/66/7ffc66e170f61b8714c0c72227a982e0.jpg" alt="img1" width="400" height="300">
+    <div class=polaroid id="calculatorContainer">
+        <h1>Simple Calculator</h1>
+        <form id="calculatorForm" action="/calculate" method="post">
+            <label for="num1">Enter first number:</label>
+            <input type="number" id="num1" name="num1" required><br><br>
+            <label for="num2">Enter second number:</label>
+            <input type="number" id="num2" name="num2"><br><br>
+            <label for="operation">Select operation:</label>
+            <select id="operation" name="operation">
+                <option value="add">Addition</option>
+                <option value="subtract">Subtraction</option>
+                <option value="multiply">Multiplication</option>
+                <option value="divide">Division</option>
+                <option value="modulus">Modulus</option>
+                <option value="square">Square</option>
+                <option value="cube">Cube</option>
+                <option value="power">Power</option>
+                <option value="factorial">Factorial</option>
+            </select><br><br>
+            <button type="submit">Calculate</button>
+        </form>
+    </div>
+</body>
+</html>
